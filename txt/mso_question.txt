@@ -3,26 +3,26 @@
     \Delta n^3 = (n+1)^3 - n^3 = 1 + 6 \binom{n+1}{2}
 \end{align*}
 where $\binom{n+1}{2}$ are triangular numbers.
-Apart that, triangular numbers themselves are equivalent to the sum of first $n$ natural numbers
+Apart that, triangular numbers themselves are equivalent to the sum of first $n$ non-negative integers
 \begin{align*}
-    \binom{n+1}{2} = \sum_{k=1}^{n} k
+    \binom{n+1}{2} = \sum_{k=0}^{n} k
 \end{align*}
 Which leads to identity in terms of finite differences of cubes
 \begin{align*}
-    \Delta n^3 = (n+1)^3 - n^3 = 1 + 6 \sum_{k=1}^{n} k
+    \Delta n^3 = (n+1)^3 - n^3 = 1 + 6 \sum_{k=0}^{n} k
 \end{align*}
 It is obvious that $n^3$ evaluates to the sum of its $n-1$ finite differences, so that
 \begin{align*}
-    \Delta n^3 = \sum_{k=0}^{n-1} \Delta k^3 = \sum_{k=0}^{n-1} \left( 1 + 6 \sum_{k=1}^{n} k \right)
+    \Delta n^3 = \sum_{k=0}^{n-1} \Delta k^3 = \sum_{k=0}^{n-1} \left( 1 + 6 \sum_{t=0}^{k} t \right)
     \quad \quad (1)
 \end{align*}
 In its explicit form
 \begin{align*}
-    n^3 &= [1+6\cdot0]+[1+6\cdot0+6\cdot1]+[1+6\cdot0+6\cdot1+6\cdot2]  \\
-    &+ \cdots + [1+6\cdot0+6\cdot1+6\cdot2+\cdots+6\cdot(n-1)] \quad \quad (2)
+    n^3 &= [1+6\cdot0]+[1+6\cdot0+6\cdot1]+[1+6\cdot0+6\cdot1+6\cdot2] \quad \quad (2) \\
+    &+ \cdots + [1+6\cdot0+6\cdot1+6\cdot2+\cdots+6\cdot(n-1)]
 \end{align*}
-We could use Faulhaber's formula on $\sum_{k=1}^{n} k$ in (1),
-which leads to well known and expected identity in cubes $n^3 = \sum_{k=0}^{n-1} \sum_{r=0}^{2} \binom{3}{r} k^r$.
+We could use Faulhaber's formula on $\sum_{t=0}^{k} t$ in (1),
+which leads to well known and expected identity in cubes $n^3 = \sum_{k=0}^{n-1} \sum_{t=0}^{2} \binom{3}{t} k^t$.
 
 Instead, let's rearrange the terms in (2) to get
 \begin{align*}
