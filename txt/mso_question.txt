@@ -1,4 +1,4 @@
-It is widely known fact that finite difference of cubes can be expressed in terms of triangular numbers
+﻿It is widely known fact that finite difference of cubes can be expressed in terms of triangular numbers
 \begin{align*}
     \Delta n^3 = (n+1)^3 - n^3 = 1 + 6 \binom{n+1}{2}
 \end{align*}
@@ -18,7 +18,7 @@ It is obvious that $n^3$ evaluates to the sum of its $n-1$ finite differences, s
 \end{align*}
 In its explicit form
 \begin{align*}
-    n^3 &= [1+6\cdot0]+[1+6\cdot0+6\cdot1]+[1+6\cdot0+6\cdot1+6\cdot2]  \quad \quad (2) \\
+    n^3 &= [1+6\cdot0]+[1+6\cdot0+6\cdot1]+[1+6\cdot0+6\cdot1+6\cdot2] \quad \quad (2) \\
     &+ \cdots + [1+6\cdot0+6\cdot1+6\cdot2+\cdots+6\cdot(n-1)]
 \end{align*}
 We could use Faulhaber's formula on $\sum_{t=0}^{k} t$ in (1),
